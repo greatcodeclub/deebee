@@ -9,16 +9,10 @@ A project of [The Great Code Club](http://www.greatcodeclub.com/).
 You need:
 
 - A recent version of [node](http://nodejs.org/).
-- `make`. You probably have it already.
-
-To install Node modules and compile the parser:
-
-    $ npm install
-    $ make
 
 ## Usage
 
-TODO
+    $ node demo.js
 
 ## License
 
