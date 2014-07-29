@@ -1,0 +1,21 @@
+{
+  "name": "deebee",
+  "version": "0.0.1",
+  "description": "A simple database",
+  "main": "lib/deebee.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/greatcodeclub/deebee.git"
+  },
+  "keywords": [
+    "database",
+    "btree"
+  ],
+  "author": "Marc-Andre Cournoyer",
+  "bugs": {
+    "url": "https://github.com/greatcodeclub/deebee/issues"
+  },
+  "devDependencies": {
+    "mocha": "1.x"
+  }
+}
