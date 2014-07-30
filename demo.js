@@ -4,19 +4,24 @@ var db = new DB()
 var table = db.table("users")
 
 table.createIndex("username")
+table.createIndex("status")
 
 for (var i = 0; i < 500000; i++) {
   table.insert({
     "username": "user" + i,
     "name": "The User #" + i,
-    "age": 30
+    "status": i % 10000 === 0 ? 'active' : 'canceled'
   })
 }
 
 var record = table.findById(1)
 console.log(record)
 
-console.time("findAllByAttribute")
-var records = table.findBy({ username: "user10000", age: 30 })
-console.timeEnd("findAllByAttribute")
+console.time("findBy username")
+var records = table.findBy({ username: "user10000" })
+console.timeEnd("findBy username")
 console.log(records)
+
+console.time("findBy status")
+table.findBy({ status: "active" })
+console.timeEnd("findBy status")
