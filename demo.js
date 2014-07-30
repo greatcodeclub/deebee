@@ -1,7 +1,6 @@
-var DB = require("./lib/db").DB
+var Table = require("./lib/table").Table
 
-var db = new DB()
-var table = db.table("users")
+var table = new Table()
 
 table.createIndex("username")
 table.createIndex("status")
