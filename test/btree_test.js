@@ -12,12 +12,14 @@ describe('BTree', function() {
     this.tree.insert(5, 5)
 
     assert.equal(this.tree.inspect(), "5")
+    assert.equal(this.tree.search(5), 5)
   })
 
   it('insert 9', function () {
     this.tree.insert(9, 9)
 
     assert.equal(this.tree.inspect(), "5, 9")
+    assert.equal(this.tree.search(5), 5)
   })
 
   it('insert 3', function () {
@@ -32,6 +34,7 @@ describe('BTree', function() {
     assert.equal(this.tree.inspect(), "5\n" +
                                       "  3\n" +
                                       "  7, 9")
+    assert.equal(this.tree.search(7), 7)
   })
 
   it('insert 1', function () {
