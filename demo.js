@@ -17,11 +17,11 @@ var record = table.findById(1)
 console.log(record)
 
 console.time("findBy username")
-var records = table.findBy({ username: "user10000" })
+var records = table.findBy('username', "user10000")
 console.timeEnd("findBy username")
 console.log(records)
 
 console.time("findBy status")
-var records = table.findBy({ status: "active" })
+var records = table.findBy('status', "active")
 console.timeEnd("findBy status")
 console.log('Found', records.length, 'records')
