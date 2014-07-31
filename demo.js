@@ -5,11 +5,11 @@ var table = new Table()
 table.createIndex("username")
 table.createIndex("status")
 
-for (var i = 0; i < 500000; i++) {
+for (var i = 0; i < 100000; i++) {
   table.insert({
     "username": "user" + i,
     "name": "The User #" + i,
-    "status": i % 10000 === 0 ? 'active' : 'canceled'
+    "status": i % 1000 === 0 ? 'active' : 'canceled'
   })
 }
 
