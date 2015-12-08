@@ -8,6 +8,18 @@ describe('BTree', function() {
 
   // Based on example on http://www.cs.utexas.edu/users/djimenez/utsa/cs3343/lecture17.html
 
+  it('sequential insert 6+ elements', function () {
+    var tree = new BTree()
+    tree.insert(1, 1)
+    tree.insert(2, 2)
+    tree.insert(3, 3)
+    tree.insert(4, 4)
+    tree.insert(5, 5)
+    tree.insert(6, 6)
+
+    assert.equal(tree.search(6), 6)
+  })
+
   it('insert 5', function () {
     this.tree.insert(5, 5)
 
@@ -98,7 +110,7 @@ describe('BTree', function() {
       it('search for ' + i, function() {
         assert.equal(this.tree.search(i), i)
       })
-      
+
     })(i)
   }
 })
